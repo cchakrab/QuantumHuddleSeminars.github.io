@@ -10,12 +10,21 @@
 
 body {
     background: #f1f1f1;
-    max-width: 1200px;
-    margin: auto;
 }
 
-body > * {
+#content {
     width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+}
+
+#content > * {
+    width: 100%;
+}
+
+h2 {
+    margin: 1rem 0;
 }
 
 #title {
@@ -26,29 +35,59 @@ body > * {
     flex-direction: row;
 }
 
-#title h1,h2 {
+#title h1, #title h2 {
     margin: 1rem;
 }
 
-#title img {
-    height: 10em;
+#title h1 {
+    font-size: 3.5rem;
 }
 
-#seminarlinks {
+#title img {
+    height: 20rem;
+}
+
+@media (max-width: 1000px) {
+#title {
+    flex-direction: column-reverse;
+    text-align: center;
+}
+#title img {
+    height: 30vw;
+}
+}
+
+.row {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
+@media (max-width: 1000px) {
+.row {
+    flex-direction: column;
+}
+}
+
+#seminarlinks {
+}
+
 .square {
     position: relative;
     margin: 0 10px;
-    width: 400px;
-    height: 400px;
+    width: 330px;
+    height: 330px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1000px) {
+.square {
+    width: 50vw;
+    height: 50vw;
+}
 }
 
 .square span:nth-child(1) {
