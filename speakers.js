@@ -9,7 +9,14 @@ SPEAKERS = [
 {
 "date": new Date("2020-07-13T12:00:00-04:00"),
 "name": "David Mazziotti",
-"affiliation": "ETH",
+"affiliation": "University of Chicago",
+"title": "This is the title",
+"abstract": "This is the abstract"
+},
+{
+"date": new Date("2020-07-27T12:00:00-04:00"),
+"name": "Danna Freedman",
+"affiliation": "Northwestern University",
 "title": "This is the title",
 "abstract": "This is the abstract"
 }
