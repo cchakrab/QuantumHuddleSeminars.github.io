@@ -46,8 +46,8 @@
             <h2>
                 Upcoming Seminar
             </h2>
-            <p>On date so and so, person so and so will talk about so and so.</p>
-            <a href="#" target="_blank">Details</a>
+            <p id="nextspeakerblurb"></p>
+            <a href="#upcoming">Details</a>
         </div>
     </div>
 
@@ -60,13 +60,60 @@
                 Past and Future Speakers
             </h2>
             <p>Archive of past talks and upcoming events.</p>
-            <a href="#" target="_blank">Full List</a>
+            <a href="#pastandfuture">Full List</a>
         </div>
     </div>
 </div>
 
 <div id="upcoming">
+<h2>Next Speaker</h2>
 </div>
+
+<div id="why">
+<h2>The Seminar</h2>
+<p>
+The point of the quantum huddle is so and so...
+</p>
+</div>
+
+<div id="pastandfuture">
+<h2>Past and Future Talks</h2>
+</div>
+
+<script src="./speakers.js"></script>
+<script>
+SPEAKERS = SPEAKERS.sort((a,b)=>a.date-b.date);
+const pastandfuture = document.getElementById("pastandfuture");
+for (const s of SPEAKERS) {
+    console.log(s);
+    var e = document.createElement("p");
+    e.innerHTML = `
+    <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDay()}</time>
+    ${s.name} from ${s.affiliation}`;
+    pastandfuture.appendChild(e);
+}
+const now = new Date();
+const nextspeaker = SPEAKERS.find(x=>x.date>now);
+const nextspeakerblurb = document.getElementById("nextspeakerblurb");
+const upcoming = document.getElementById("upcoming");
+nextspeakerblurb.innerHTML = `
+    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDay()}</time>
+    we will host
+    ${nextspeaker.name}
+    from ${nextspeaker.affiliation}`;
+var e = document.createElement("p");
+e.innerHTML = `
+    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDay()}</time>
+    we will host
+    ${nextspeaker.name}
+    from ${nextspeaker.affiliation}
+    <div class="title">${nextspeaker.title}</div>
+    <div class="abstract">${nextspeaker.abstract}</div>
+    `;
+upcoming.appendChild(e);
+
+
+</script>
 
 <div id="organizers">
 <h2>Organizers</h2>
@@ -88,6 +135,8 @@ Tomas Neuman is a physics postdoc at Harvard who would rather be flying.
 </div>
 
 <div id="funding">
+<h2>Sponsors</h2>
+funded by so and so...
 </div>
 
 </div>
