@@ -64,7 +64,7 @@ h2 {
     flex-direction: row;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
 .row {
     flex-direction: column;
 }
@@ -84,14 +84,17 @@ h2 {
     align-items: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
 .square {
     width: 50vw;
     height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    margin-bottom: 1rem;
 }
 }
 
-.square span:nth-child(1) {
+#signup span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +103,6 @@ h2 {
     border: 2px solid black;
     border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
     transition: 0.5s;
-    animation: animate 6s linear infinite;
 }
 
 #signup:hover span:nth-child(1) {
@@ -118,7 +120,7 @@ h2 {
     background: #5ad1cd;
 }
 
-.square span:nth-child(2) {
+#listofspeakers span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -127,7 +129,6 @@ h2 {
     border: 2px solid black;
     border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
     transition: 0.5s;
-    animation: animate 4s linear infinite;
 }
 
 #signup:hover span:nth-child(2) {
@@ -145,7 +146,7 @@ h2 {
     background: #5ad1cd;
 }
 
-.square span:nth-child(3) {
+#nextspeaker span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -154,7 +155,6 @@ h2 {
     border: 2px solid black;
     border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
     transition: 0.5s;
-    animation: animate2 10s linear infinite;
 }
 
 #signup:hover span:nth-child(3) {
@@ -196,20 +196,42 @@ h2 {
     color: #333;
 }
 
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-@keyframes animate2 {
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 600px;
+  padding: 1rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -300px;
+}
+
+.tooltip .tooltiptext * {
+  color: #fff;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

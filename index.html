@@ -27,8 +27,6 @@
 <div id="seminarlinks" class="row">
     <div class="square" id="signup">
         <span></span>
-        <span></span>
-        <span></span>
         <div class="content">
             <h2>
                 Sign up!
@@ -40,8 +38,6 @@
 
     <div class="square" id="nextspeaker">
         <span></span>
-        <span></span>
-        <span></span>
         <div class="content">
             <h2>
                 Upcoming Seminar
@@ -52,8 +48,6 @@
     </div>
 
     <div class="square" id="listofspeakers">
-        <span></span>
-        <span></span>
         <span></span>
         <div class="content">
             <h2>
@@ -89,7 +83,9 @@ for (const s of SPEAKERS) {
     var e = document.createElement("p");
     e.innerHTML = `
     <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDate()}</time>
-    ${s.name} from ${s.affiliation}`;
+    <strong>${s.name}</strong> from ${s.affiliation}
+    <span class="tooltip">${s.title}<span class="tooltiptext"><strong>Abstract:</strong> ${s.abstract}</span></span>
+    `;
     pastandfuture.appendChild(e);
 }
 const now = new Date();
@@ -99,20 +95,17 @@ const upcoming = document.getElementById("upcoming");
 nextspeakerblurb.innerHTML = `
     On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time>
     we will host
-    ${nextspeaker.name}
+    <strong>${nextspeaker.name}</strong>
     from ${nextspeaker.affiliation}`;
 var e = document.createElement("p");
 e.innerHTML = `
-    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time>
-    we will host
-    ${nextspeaker.name}
-    from ${nextspeaker.affiliation}
-    <div class="title">${nextspeaker.title}</div>
+    <h3 class="title">${nextspeaker.title}</h3>
+    <h4>${nextspeaker.name}</h4>
+    ${nextspeaker.affiliation}
+    <p><time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time></p>
     <div class="abstract">${nextspeaker.abstract}</div>
     `;
 upcoming.appendChild(e);
-
-
 </script>
 
 <div id="organizers">
