@@ -196,42 +196,25 @@ h2 {
     color: #333;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+.titlewithtooltip {
+  text-decoration: underline black dotted;
+  margin-left: 1rem;
 }
 
-.tooltip .tooltiptext {
+.titlewithtooltip .tooltiptext {
   visibility: hidden;
-  width: 600px;
-  padding: 1rem;
   background-color: black;
   color: #fff;
-  text-align: center;
   border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  top: 150%;
-  left: 50%;
-  margin-left: -300px;
+  padding: 0.5rem;
+  height: 0;
 }
 
-.tooltip .tooltiptext * {
+.titlewithtooltip .tooltiptext * {
   color: #fff;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
+.titlewithtooltip:hover .tooltiptext {
   visibility: visible;
+  height: auto;
 }

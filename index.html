@@ -84,7 +84,7 @@ for (const s of SPEAKERS) {
     e.innerHTML = `
     <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDate()}</time>
     <strong>${s.name}</strong> from ${s.affiliation}
-    <span class="tooltip">${s.title}<span class="tooltiptext"><strong>Abstract:</strong> ${s.abstract}</span></span>
+    <div class="titlewithtooltip">${s.title}<div class="tooltiptext"><strong>Abstract:</strong> ${s.abstract}</div></div>
     `;
     pastandfuture.appendChild(e);
 }
@@ -97,7 +97,7 @@ nextspeakerblurb.innerHTML = `
     we will host
     <strong>${nextspeaker.name}</strong>
     from ${nextspeaker.affiliation}`;
-var e = document.createElement("p");
+var e = document.createElement("div");
 e.innerHTML = `
     <h3 class="title">${nextspeaker.title}</h3>
     <h4>${nextspeaker.name}</h4>
