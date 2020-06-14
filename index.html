@@ -88,7 +88,7 @@ for (const s of SPEAKERS) {
     console.log(s);
     var e = document.createElement("p");
     e.innerHTML = `
-    <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDay()}</time>
+    <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDate()}</time>
     ${s.name} from ${s.affiliation}`;
     pastandfuture.appendChild(e);
 }
@@ -97,13 +97,13 @@ const nextspeaker = SPEAKERS.find(x=>x.date>now);
 const nextspeakerblurb = document.getElementById("nextspeakerblurb");
 const upcoming = document.getElementById("upcoming");
 nextspeakerblurb.innerHTML = `
-    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDay()}</time>
+    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time>
     we will host
     ${nextspeaker.name}
     from ${nextspeaker.affiliation}`;
 var e = document.createElement("p");
 e.innerHTML = `
-    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDay()}</time>
+    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time>
     we will host
     ${nextspeaker.name}
     from ${nextspeaker.affiliation}
