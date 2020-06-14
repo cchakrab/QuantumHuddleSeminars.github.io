@@ -1,5 +1,4 @@
 SPEAKERS = [
-  
 {
 "date": new Date("2020-06-22T12:00:00-04:00"),
 "name": "Mohammad Hafezi",
@@ -8,7 +7,7 @@ SPEAKERS = [
 "abstract": "We describe how various quantum optics techniques can be exploited to engineer both single-particle and effective interaction terms in solid-state systems. We start by electronic quantum Hall systems and show how optical selection rules are modified and how an effective interaction can be generated using an optical drive. We also investigate whether anyonic excitation can be optically generated and manipulated. Moreover, we discuss how patterned light can lead to superlattice structures for electrons, including flatland, kagome lattice, etc. In the end, we discuss how optical manipulation, such as optical pumping and bath engineering, could provide a new way to enhance superconductivity."
 },
 {
-"date": new Date("2020-07-06T12:00:00-04:00"),
+"date": new Date("2020-06-29T12:00:00-04:00"),
 "name": "Martin Frimmer",
 "affiliation": "ETH Zurich",
 "title": "TBA",
@@ -29,7 +28,7 @@ SPEAKERS = [
 "abstract": "TBA"
 },
 {
-"date": new Date("2020-07-27T12:00:00-04:00"),
+"date": new Date("2020-07-20T12:00:00-04:00"),
 "name": "Mete Atatüre",
 "affiliation": "University of Cambridge",
 "title": "TBA",
