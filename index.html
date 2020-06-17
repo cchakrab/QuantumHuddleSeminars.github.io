@@ -96,7 +96,7 @@ for (const s of SPEAKERS) {
     console.log(s);
     var e = document.createElement("p");
     e.innerHTML = `
-    <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()}-${s.date.getDate()}</time>
+    <time datetime=${s.date.toISOString()}>${s.date.getFullYear()}-${s.date.getMonth()+1}-${s.date.getDate()}</time>
     <strong>${s.name}</strong> from ${s.affiliation}
     <div class="titlewithtooltip">${s.title}<div class="tooltiptext"><strong>Abstract:</strong> ${s.abstract}</div></div>
     `;
@@ -107,7 +107,7 @@ const nextspeaker = SPEAKERS.find(x=>x.date>now);
 const nextspeakerblurb = document.getElementById("nextspeakerblurb");
 const upcoming = document.getElementById("upcoming");
 nextspeakerblurb.innerHTML = `
-    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time>
+    On <time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()+1}-${nextspeaker.date.getDate()}</time>
     we will host
     <strong>${nextspeaker.name}</strong>
     from ${nextspeaker.affiliation}`;
@@ -116,7 +116,7 @@ e.innerHTML = `
     <h3 class="title">${nextspeaker.title}</h3>
     <h4>${nextspeaker.name}</h4>
     ${nextspeaker.affiliation}
-    <p><time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()}-${nextspeaker.date.getDate()}</time></p>
+    <p><time datetime=${nextspeaker.date.toISOString()}>${nextspeaker.date.getFullYear()}-${nextspeaker.date.getMonth()+1}-${nextspeaker.date.getDate()}</time></p>
     <div class="abstract">${nextspeaker.abstract}</div>
     `;
 upcoming.appendChild(e);
