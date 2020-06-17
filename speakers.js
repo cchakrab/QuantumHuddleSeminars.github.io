@@ -23,7 +23,7 @@ SPEAKERS = [
 {
 "date": new Date("2020-07-13T12:00:00-04:00"),
 "name": "David Mazziotti",
-"affiliation": "University of Chicago",
+"affiliation": "The University of Chicago",
 "title": "TBA",
 "abstract": "TBA"
 },
