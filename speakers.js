@@ -28,13 +28,6 @@ SPEAKERS = [
 "abstract": "TBA"
 },
 {
-"date": new Date("2020-07-20T12:00:00-04:00"),
-"name": "Mete Atatüre",
-"affiliation": "University of Cambridge",
-"title": "TBA",
-"abstract": "TBA"
-},
-{
 "date": new Date("2020-07-27T12:00:00-04:00"),
 "name": "Danna Freedman",
 "affiliation": "Northwestern University",
